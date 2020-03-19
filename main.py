@@ -1,16 +1,28 @@
 #!/usr/bin/env python3
 
-#from os import system
+import csv
 
 
 def welcome_msg():
-    return print("Cars DB extractor program:")
+    print("\nCars DB extractor program:")
+
+
+# Print lines that correspond to the brand
+def brand(choice):
+    print(choice)
+    with open('cars.csv', 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if choice in row:
+                print(row)
+
 
 
 if __name__ == '__main__':
     try:
         while True:
-            input(welcome_msg())
+            welcome_msg()
+            brand(choice = input("Select your brand:"))
     except KeyboardInterrupt:
         print("Interrupted")
 
