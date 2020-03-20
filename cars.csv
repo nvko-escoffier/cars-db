@@ -1,4 +1,10 @@
 brand,model,power,year,perf
-audi,a4 b7,200,2010,7
+audi,a4,200,2010,7
+audi,a5,170,2010,7.9
+audi,rs3,340,2009,4.9
 bmw,325d,217,2011,6.8
+bmw,435i,306,2015,5
+bmw,540i,340,2012,4.8
 mercedes,c320,231,2009,5.9
+mercedes,a180,121,2015,7.5
+mercedes,e220,170,2017,8.2

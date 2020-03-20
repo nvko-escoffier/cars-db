@@ -2,6 +2,8 @@
 
 import csv
 
+manufacturer = ['audi', 'bmw', 'mercedes']
+
 
 def welcome_msg():
     print("\nCars DB extractor program:")
@@ -13,16 +15,22 @@ def brand(choice):
     with open('cars.csv', 'r') as file:
         reader = csv.reader(file)
         for row in reader:
-            if choice in row:
+            if manufacturer[int(choice)] in row:
                 print(row)
-
 
 
 if __name__ == '__main__':
     try:
         while True:
             welcome_msg()
-            brand(choice = input("Select your brand:"))
+            for position, item in enumerate(manufacturer):
+                print(" ", position, item)
+#                print(item, manufacturer[int(item)])
+#                print(manufacturer[item)]
+#                print(item)
+
+            choice = input("Select your brand: ")
+            brand(choice)
     except KeyboardInterrupt:
         print("Interrupted")
 
